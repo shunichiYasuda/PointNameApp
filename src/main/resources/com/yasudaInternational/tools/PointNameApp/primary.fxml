@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yasudaInternational.tools.PointNameApp.PrimaryController">
    <children>
       <Pane prefHeight="305.0" prefWidth="330.0">
          <children>
@@ -20,7 +20,7 @@
                   <CheckBox mnemonicParsing="false" text="ゼミ1" />
                </children>
             </HBox>
-            <TextArea layoutY="56.0" prefHeight="255.0" prefWidth="330.0" />
+            <TextArea fx:id="log" layoutY="56.0" prefHeight="255.0" prefWidth="330.0" />
          </children>
       </Pane>
       <ToolBar layoutY="0.0" prefHeight="40.0" prefWidth="330.0">

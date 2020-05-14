@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yasudaInternational.tools.PointNameApp.PrimaryController">
    <children>
-      <Pane prefHeight="305.0" prefWidth="330.0">
+      <Pane layoutX="-1.0" prefHeight="305.0" prefWidth="330.0">
          <children>
-            <HBox layoutY="38.0" prefHeight="25.0" prefWidth="330.0">
-               <children>
-                  <CheckBox mnemonicParsing="false" text="ゼミ2" />
-                  <CheckBox mnemonicParsing="false" text="ゼミ3" />
-                  <CheckBox mnemonicParsing="false" text="一般基礎演習" />
-                  <CheckBox mnemonicParsing="false" text="ゼミ1" />
-               </children>
-            </HBox>
-            <TextArea fx:id="log" layoutY="56.0" prefHeight="255.0" prefWidth="330.0" />
+            <TextArea fx:id="log" layoutY="102.0" prefHeight="209.0" prefWidth="330.0" />
+            <RadioButton fx:id="basicClass" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" text="一般基礎演習">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grp" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="semi1" layoutX="14.0" layoutY="72.0" mnemonicParsing="false" text="ゼミ1" toggleGroup="$grp" />
+            <RadioButton fx:id="semi2" layoutX="128.0" layoutY="46.0" mnemonicParsing="false" text="ゼミ2" toggleGroup="$grp" />
+            <RadioButton fx:id="semi3" layoutX="128.0" layoutY="72.0" mnemonicParsing="false" text="ゼミ3" toggleGroup="$grp" />
          </children>
       </Pane>
-      <ToolBar layoutY="0.0" prefHeight="40.0" prefWidth="330.0">
+      <ToolBar layoutX="-1.0" prefHeight="40.0" prefWidth="330.0">
         <items>
-          <Button mnemonicParsing="false" text="Select" />
-            <Button mnemonicParsing="false" text="Quit" />
+          <Button mnemonicParsing="false" onAction="#pointAction" text="Select" />
+            <Button mnemonicParsing="false" onAction="#quitAction" text="Quit" />
         </items>
       </ToolBar>
    </children>
